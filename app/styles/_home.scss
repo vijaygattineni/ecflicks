@@ -1,0 +1,58 @@
+.home-container {
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 100%;
+  }
+  .movieCarouselImg img {
+    width: auto;
+    height: 300px;
+    max-height: 300px;
+  }
+  .movies-list-container {
+    margin: 25px 0px 25px 0px;
+    .head-cont {
+      color: #777;
+      margin-bottom: 15px;
+    }
+    .movies-header {
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 20px;
+      color: #777;
+      .movies-type {
+        padding-right: 15px;
+      }
+      .fa-icon {
+        vertical-align: middle;
+      }
+    }
+    #movieListCarousel {
+      .carousel-inner {
+        width: 90%;
+        margin: auto;
+        .fixed-panel{
+          min-height: 200px;
+          max-height: 200px;
+        }
+        .panel-body {
+          height: 300px;
+          overflow: hidden;
+        }
+      }
+      .carousel-control {
+        width: 0%;
+      }
+    }
+  }
+}
+
+
+/*Mobile media queries*/
+@media (max-width: 768px) {
+  .home-container {
+    #topMovieCarousel {
+      margin-left: -50px;
+      margin-right: -50px;
+    }
+  }
+}

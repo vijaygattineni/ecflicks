@@ -1,0 +1,144 @@
+[
+  {
+    "videosType": "Top 4",
+    "relatedResults": [
+      {
+        "title": "The Good Dinosaur",
+        "language": "Englisj",
+        "description": "Story of a boy who was groomed by by Dinosaur",
+        "genere": "Animation",
+        "country": "US/UK",
+        "posterUrl": "movie1.png",
+        "duration": "90 Min",
+        "year": "2016"
+      },
+      {
+        "title": "Kabaali",
+        "language": "Tamil",
+        "description": "A Gangster of Malaysia and his fight for Tamil people in Malaysia",
+        "genere": "Action",
+        "country": "India",
+        "posterUrl": "movie2.png",
+        "duration": "150 Min",
+        "year": "2016"
+      },
+      {
+        "title": "Inkokkadu",
+        "language": "Telgu",
+        "description": "Action love story",
+        "genere": "Action",
+        "country": "India",
+        "posterUrl": "movie3.png",
+        "duration": "180 Min",
+        "year": "2016"
+      },
+      {
+        "title": "Golden Finger",
+        "language": "Englisj",
+        "description": "Investigating a gold magnate's smuggling, James Bond uncovers a plot to contaminate",
+        "genere": "Action",
+        "country": "US/UK",
+        "posterUrl": "movie4.png",
+        "duration": "120 Min",
+        "year": "2009"
+      }
+    ]
+  },
+  {
+  "videosType" : "Trending Movies",
+  "relatedResults" : [
+    {
+    "title" :"Baag Milkha Baag",
+    "language": "Hindi",
+    "description": "True story of indian athelet",
+    "genere": "Action",
+    "country":"India",
+    "posterurl":"baagmilkha.png",
+    "duration": "90 Min",
+    "year": "2016"
+    },
+    {
+      "title" :"Baag Milkha Baag",
+      "language": "Hindi",
+      "description": "True story of indian athelet",
+      "genere": "Action",
+      "country":"India",
+      "posterurl":"baagmilkha.png",
+      "duration": "90 Min",
+      "year": "2016"
+    },
+    {
+      "title" :"Baag Milkha Baag",
+      "language": "Hindi",
+      "description": "True story of indian athelet",
+      "genere": "Action",
+      "country":"India",
+      "posterurl":"baagmilkha.png",
+      "duration": "90 Min",
+      "year": "2016"
+    },
+    {
+      "title" :"Baag Milkha Baag",
+      "language": "Hindi",
+      "description": "True story of indian athelet",
+      "genere": "Action",
+      "country":"India",
+      "posterurl":"baagmilkha.png",
+      "duration": "90 Min",
+      "year": "2016"
+    },
+    {
+      "title" :"Baag Milkha Baag",
+      "language": "Hindi",
+      "description": "True story of indian athelet",
+      "genere": "Action",
+      "country":"India",
+      "posterurl":"baagmilkha.png",
+      "duration": "90 Min",
+      "year": "2016"
+    },
+    {
+      "title" :"Baag Milkha Baag",
+      "language": "Hindi",
+      "description": "True story of indian athelet",
+      "genere": "Action",
+      "country":"India",
+      "posterurl":"baagmilkha.png",
+      "duration": "90 Min",
+      "year": "2016"
+    },
+    {
+      "title" :"Baag Milkha Baag",
+      "language": "Hindi",
+      "description": "True story of indian athelet",
+      "genere": "Action",
+      "country":"India",
+      "posterurl":"baagmilkha.png",
+      "duration": "90 Min",
+      "year": "2016"
+    },
+    {
+      "title" :"Baag Milkha Baag",
+      "language": "Hindi",
+      "description": "True story of indian athelet",
+      "genere": "Action",
+      "country":"India",
+      "posterurl":"baagmilkha.png",
+      "duration": "90 Min",
+      "year": "2016"
+    }
+  ]
+  },
+  {
+    "videosType" : "Trending Tv Shows",
+    "relatedResults" : [{
+      "title" :"Baag Milka Baag",
+      "language": "Hindi",
+      "description": "True story of indian athelet",
+      "genere": "Action",
+      "country":"India",
+      "posterurl":"sample.png",
+      "duration": "90 Min"
+    }]
+  }
+]

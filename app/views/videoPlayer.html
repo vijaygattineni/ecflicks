@@ -1,0 +1,11 @@
+<div class="video-player-container">
+  <div style="text-align: center;margin-top: -50px">
+    <video width="740" height="580px" controls>
+      <source src="{{videoController.videoPath}}" type="video/mkv">
+      <source src="{{videoController.videoPath}}" type="video/mp4">
+    </video>
+  </div>
+  <div>
+    <h3 ng-bind="videoController.videoTitle"></h3>
+  </div>
+</div>
