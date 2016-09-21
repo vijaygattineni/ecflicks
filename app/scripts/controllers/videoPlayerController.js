@@ -19,7 +19,7 @@ angular.module('emoviesApp')
     //Service call
     self.getVideoUrl = function (videoName,videoId) {
       self.videoPath = '/images/The_Jungle_Book_2016.mp4';
-      self.videoTitle = "The Jungle Book 2016";
+      self.videoTitle = 'The Jungle Book 2016';
       return self.videoPath;
     };
 

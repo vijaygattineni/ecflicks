@@ -1,0 +1,21 @@
+
+> yo@1.8.5 postinstall /Users/vgattineni/Documents/emovies/node_modules/yo
+> yodoctor
+
+
+Yeoman Doctor
+Running sanity checks on your system
+
+✔ Global configuration file is valid
+✔ NODE_PATH matches the npm root
+✔ Node.js version
+✔ No .bowerrc file in home directory
+✔ No .yo-rc.json file in home directory
+✔ npm version
+
+Everything looks all right!
+emovies@ /Users/vgattineni/Documents/emovies
+├── generator-angular@0.15.1  extraneous
+├── generator-karma@2.0.0  extraneous
+└── yo@1.8.5  extraneous
+

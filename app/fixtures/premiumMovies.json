@@ -1,0 +1,101 @@
+{
+  "videosType" : "Premium Movies",
+  "relatedResults" : [
+    {
+      "title": "Jungle Book",
+      "language": "English",
+      "description": "Animation movie, a kid grown by wolfs pack and about his survival",
+      "genere": "Action",
+      "country": "US/UK",
+      "posterurl": "jungleBook.png",
+      "duration": "90 Min",
+      "year": "2016",
+      "type": "premium",
+      "id": "005"
+    },
+    {
+      "title" :"Baahubali",
+      "language": "Telugu",
+      "description": "High action packed movie with beautiful graphics, emotions and background scores",
+      "genere": "Action",
+      "country":"India",
+      "posterurl":"baahubali.png",
+      "duration": "150 Min",
+      "year": "2015",
+      "type": "premium",
+      "id":"006"
+    },
+    {
+      "title" :"300",
+      "language": "English",
+      "description": "Story of a 300 great warriors and their fight for the glory of their mother land",
+      "genere": "Action",
+      "country":"US/UK",
+      "posterurl":"300.png",
+      "duration": "120 Min",
+      "year": "2012",
+      "type": "premium",
+      "id":"007"
+    },
+    {
+      "title" :"Bajrangi bhaai jaan",
+      "language": "Hindi",
+      "description": "",
+      "genere": "Action",
+      "country":"India",
+      "posterurl":"bajrangi.png",
+      "duration": "90 Min",
+      "year": "2016",
+      "type": "premium",
+      "id":"008"
+    },
+    {
+      "title": "Jungle Book",
+      "language": "English",
+      "description": "Animation movie, a kid grown by wolfs pack and about his survival",
+      "genere": "Action",
+      "country": "US/UK",
+      "posterurl": "jungleBook.png",
+      "duration": "90 Min",
+      "year": "2016",
+      "type": "premium",
+      "id": "009"
+    },
+    {
+      "title" :"Baahubali",
+      "language": "Telugu",
+      "description": "High action packed movie with beautiful graphics, emotions and background scores",
+      "genere": "Action",
+      "country":"India",
+      "posterurl":"baahubali.png",
+      "duration": "150 Min",
+      "year": "2015",
+      "type": "premium",
+      "id":"010"
+    },
+    {
+      "title" :"300",
+      "language": "English",
+      "description": "Story of a 300 great warriors and their fight for the glory of their mother land",
+      "genere": "Action",
+      "country":"US/UK",
+      "posterurl":"300.png",
+      "duration": "120 Min",
+      "year": "2012",
+      "type": "premium",
+      "id":"011"
+    },
+    {
+      "title" :"Bajrangi bhaai jaan",
+      "language": "Hindi",
+      "description": "",
+      "genere": "Action",
+      "country":"India",
+      "posterurl":"bajrangi.png",
+      "duration": "90 Min",
+      "year": "2016",
+      "type": "premium",
+      "id":"012"
+    }
+  ]
+}

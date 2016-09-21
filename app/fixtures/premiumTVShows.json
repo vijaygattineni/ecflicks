@@ -1,0 +1,54 @@
+{
+  "videosType" : "Premium TV Shows",
+  "relatedResults" : [
+    {
+      "title": "Game Of Thrones",
+      "language": "English",
+      "description": "Several royal families desire the Iron Throne to gain control of Westeros. Whilst kingdoms fight each other for power, a sinister force lurks beyond the Wall in the north.",
+      "genere": "Action",
+      "country": "US/UK",
+      "posterurl": "gameofthrone.png",
+      "duration": "90 Min",
+      "year": "2016",
+      "type": "premium",
+      "id": "001"
+    },
+    {
+      "title" :"How I Met Your Mother",
+      "language": "English",
+      "description": "It is the story of Ted and how he fell in love. It all started when Ted’s best friend, Marshall, drops the bombshell that he’s going to propose to his long-time girlfriend, Lily, a kindergarten teacher.",
+      "genere": "Comedy",
+      "country":"US",
+      "posterurl":"howimetumother.png",
+      "duration": "150 Min",
+      "year": "2015",
+      "type": "premium",
+      "id":"002"
+    },
+    {
+      "title" :"True Blood",
+      "language": "English",
+      "description": "Vampires not only exist, but the entire world knows about them. Since a Japanese scientist's invention of synthetic blood, vampires have progressed from legendary monsters to fellow citizens overnight.",
+      "genere": "Horror",
+      "country":"US/UK",
+      "posterurl":"trueblood.png",
+      "duration": "120 Min",
+      "year": "2014",
+      "type": "premium",
+      "id":"003"
+    },
+    {
+      "title" :"American Horror Story",
+      "language": "English",
+      "description": " A family of three who have moved from Boston to LA for a fresh start but end up living in a sinister haunted house instead.",
+      "genere": "Horror",
+      "country":"US",
+      "posterurl":"americanhorrorstory.png",
+      "duration": "90 Min",
+      "year": "2011",
+      "type": "premium",
+      "id":"004"
+    },
+   
+  ]
+}

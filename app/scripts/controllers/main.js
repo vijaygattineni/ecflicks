@@ -9,10 +9,14 @@
  */
 angular.module('emoviesApp')
   .controller('MainCtrl', function () {
+    var self = this;
+    self.moviesTabActive = true;
 
+    //Popover
     $(document).ready(function(){
       $('[data-toggle="popover"]').popover();
     });
+    //Close popover on body click
     $('body').on('click', function (e) {
       $('[data-toggle="popover"]').each(function () {
         //the 'is' for buttons that trigger popups
