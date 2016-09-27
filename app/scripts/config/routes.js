@@ -18,7 +18,7 @@ angular.module('emoviesApp').config(function ($stateProvider, $urlRouterProvider
     views: {
       'body': {
         templateUrl: '/views/home.html',
-        controller: 'MovieCtrl as movie',
+        controller: 'MovieCtrl as videos',
       }
     }
   }).state('root.TVShows', {
@@ -26,7 +26,7 @@ angular.module('emoviesApp').config(function ($stateProvider, $urlRouterProvider
     views: {
       'body': {
         templateUrl: '/views/home.html',
-        controller: 'TVShowsCtrl as TVShows',
+        controller: 'TVShowsCtrl as videos',
       }
     }
   }).state('root.videoPlay', {
@@ -35,6 +35,14 @@ angular.module('emoviesApp').config(function ($stateProvider, $urlRouterProvider
       'body': {
         templateUrl: '/views/videoPlayer.html',
         controller: 'VideoCtrl as videoController'
+      }
+    }
+  }).state('root.summary', {
+    url: '/summary',
+    views: {
+      'body': {
+        templateUrl: '/views/summary.html',
+        controller: 'SummaryCtrl as summary'
       }
     }
   });

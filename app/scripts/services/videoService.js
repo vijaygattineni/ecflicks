@@ -33,7 +33,7 @@ angular.module('emoviesApp')
         });
       },
       getTop4TvShows: function () {
-        var top4URL = 'fixtures/top4.json';
+        var top4URL = 'fixtures/top4TvShows.json';
         return $http.get(top4URL)
           .then(function (respone) {
             return respone;
@@ -61,6 +61,15 @@ angular.module('emoviesApp')
           function (err) {
             return $q.reject(err);
           });
+      },
+      getSuggestions: function () {
+        var suggestionUrl = 'fixtures/searchResults.json';
+        return $http.get(suggestionUrl)
+          .then(function (response) {
+          return response;
+        }, function (err) {
+          return $q.reject(err);
+        });
       }
     };
   });

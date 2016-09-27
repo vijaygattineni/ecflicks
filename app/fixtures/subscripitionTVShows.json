@@ -7,8 +7,7 @@
       "description": "ACP Pradyuman, Daya and Abhijeet are an elite trio of officers who work for the CID. They seek the help of professional forensic expert Dr. Salunkhe and solve high-profile criminal cases.",
       "genere": "Action",
       "country":"India",
-      "posterurl":"cid.png",
-      
+      "posterUrl":"images/cid.png",
       "type": "subscription",
       "id":"001"
     },
@@ -18,8 +17,7 @@
       "description": "weekly travel and food show that airs on the channel",
       "genere": "Travel",
       "country":"India",
-      "posterurl":"highwayonplate.png",
-      
+      "posterUrl":"images/highwayonplate.png",
       "type": "subscription",
       "id":"002"
     },
@@ -29,8 +27,7 @@
       "description": "A 24 hours news channel",
       "genere": "News/Entertaiment",
       "country":"India",
-      "posterurl":"toi.png",
-      
+      "posterUrl":"images/toi.png",
       "type": "subscription",
       "id":"003"
     },
@@ -40,11 +37,49 @@
       "description": "Social issue about child marriage",
       "genere": "Fiction",
       "country":"India",
-      "posterurl":"chinnari.png",
-      
+      "posterUrl":"images/chinnaari.png",
       "type": "subscription",
       "id":"004"
     },
-    
+    {
+      "title" :"Highway On My Plate",
+      "language": "Hindi",
+      "description": "weekly travel and food show that airs on the channel",
+      "genere": "Travel",
+      "country":"India",
+      "posterUrl":"images/highwayonplate.png",
+      "type": "subscription",
+      "id":"002"
+    },
+    {
+      "title" :"Times of India",
+      "language": "English",
+      "description": "A 24 hours news channel",
+      "genere": "News/Entertaiment",
+      "country":"India",
+      "posterUrl":"images/toi.png",
+      "type": "subscription",
+      "id":"003"
+    },
+    {
+      "title" :"CID",
+      "language": "Hindi",
+      "description": "ACP Pradyuman, Daya and Abhijeet are an elite trio of officers who work for the CID. They seek the help of professional forensic expert Dr. Salunkhe and solve high-profile criminal cases.",
+      "genere": "Action",
+      "country":"India",
+      "posterUrl":"images/cid.png",
+      "type": "subscription",
+      "id":"001"
+    },
+    {
+      "title" :"Highway On My Plate",
+      "language": "Hindi",
+      "description": "weekly travel and food show that airs on the channel",
+      "genere": "Travel",
+      "country":"India",
+      "posterUrl":"images/highwayonplate.png",
+      "type": "subscription",
+      "id":"002"
+    }
   ]
 }

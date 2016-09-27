@@ -8,15 +8,37 @@
  * Controller of the emoviesApp
  */
 angular.module('emoviesApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', function ($scope, $rootScope, videoService, $filter) {
     var self = this;
-    self.moviesTabActive = true;
+    $rootScope.currentState = 'Movies';
 
-    //Popover
+    /*Search Suggestions*/
+    self.getSuggestions = function (inputText){
+        var re = new RegExp('^[a-zA-Z0-9]*$');
+        if(inputText !== '' && re.test(inputText)) {
+           videoService.getSuggestions(inputText).then(function (response) {
+             self.suggestionResults = $filter('filter')(response.data.relatedResults, inputText);
+             console.log(self.suggestionResults);
+          });
+        }else{
+          self.suggestionResults = [];
+        }
+    }
+
+    /*Close Search Suggestions on body click*/
+    angular.element('body').click(function (e) {
+      if (e.target.id !== 'search-videos-input') {
+        $scope.$apply(function(){
+          self.suggestionResults = [];
+          self.searchInput = null;
+        });
+      }
+    });
+
+    /*Popover close*/
     $(document).ready(function(){
       $('[data-toggle="popover"]').popover();
     });
-    //Close popover on body click
     $('body').on('click', function (e) {
       $('[data-toggle="popover"]').each(function () {
         //the 'is' for buttons that trigger popups
@@ -26,5 +48,4 @@ angular.module('emoviesApp')
         }
       });
     });
-
   });

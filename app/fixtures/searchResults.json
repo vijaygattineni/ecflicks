@@ -1,5 +1,4 @@
 {
-  "videosType" : "Premium Movies",
   "relatedResults" : [
     {
       "title": "Jungle Book",
@@ -50,52 +49,48 @@
       "id":"008"
     },
     {
-      "title": "Jungle Book",
-      "language": "English",
-      "description": "Animation movie, a kid grown by wolfs pack and about his survival",
-      "genere": "Action",
-      "country": "US/UK",
-      "posterUrl": "images/jungleBook.jpg",
-      "duration": "90 Min",
-      "year": "2016",
-      "type": "premium",
-      "id": "009"
-    },
-    {
-      "title" :"Baahubali",
-      "language": "Telugu",
-      "description": "High action packed movie with beautiful graphics, emotions and background scores",
+      "title" :"Chennai express",
+      "language": "Hindi",
+      "description": "A comedy and romantic love story of chennai girl and Mumbai guy",
       "genere": "Action",
       "country":"India",
-      "posterUrl":"images/baahubali.jpg",
-      "duration": "150 Min",
-      "year": "2015",
-      "type": "premium",
-      "id":"010"
+      "posterUrl":"images/chennaiexpress.jpg",
+      "duration": "180 Min",
+      "type": "subscription",
+      "id":"013"
     },
     {
-      "title" :"300",
+      "title" :"Janatha Garage",
+      "language": "Telugu",
+      "description": "A nature lover met a gangster who fight for people rights",
+      "genere": "Action",
+      "country":"India",
+      "posterUrl":"images/janatha.jpg",
+      "duration": "220 Min",
+      "type": "subscription",
+      "id":"014"
+    },
+    {
+      "title" :"Iron Man 2",
       "language": "English",
-      "description": "Story of a 300 great warriors and their fight for the glory of their mother land",
+      "description": "A comedy and romantic love story of chennai girl and Mumbai guy",
       "genere": "Action",
       "country":"US/UK",
-      "posterUrl":"images/300.jpg",
-      "duration": "120 Min",
-      "year": "2012",
-      "type": "premium",
-      "id":"011"
+      "posterUrl":"images/ironman2.jpg",
+      "duration": "180 Min",
+      "type": "subscription",
+      "id":"015"
     },
     {
-      "title" :"Bajrangi bhaai jaan",
-      "language": "Hindi",
-      "description": "",
+      "title" :"24",
+      "language": "Tamil",
+      "description": "An interesting action movie on time travel",
       "genere": "Action",
       "country":"India",
-      "posterUrl":"images/bajrangi.jpg",
-      "duration": "90 Min",
-      "year": "2016",
-      "type": "premium",
-      "id":"012"
+      "posterUrl":"images/24.jpg",
+      "duration": "250 Min",
+      "type": "subscription",
+      "id":"016"
     }
   ]
 }

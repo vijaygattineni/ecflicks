@@ -26,7 +26,7 @@
         vertical-align: middle;
       }
     }
-    #movieListCarousel {
+    .movieListCarousel,.subscriptionVideoCarousal {
       .carousel-inner {
         width: 90%;
         margin: auto;
@@ -35,8 +35,20 @@
           max-height: 200px;
         }
         .panel-body {
-          height: 300px;
+          max-height: 300px;
           overflow: hidden;
+          padding: 0px;
+        }
+        .panel-body img {
+          max-width: 100%;
+          -moz-transition: all 0.5s;
+          -webkit-transition: all 0.5s;
+          transition: all 0.5s;
+        }
+        .panel-body:hover img {
+          -moz-transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1);
         }
       }
       .carousel-control {
@@ -50,7 +62,7 @@
 /*Mobile media queries*/
 @media (max-width: 768px) {
   .home-container {
-    #topMovieCarousel {
+    .topMovieCarousel {
       margin-left: -50px;
       margin-right: -50px;
     }

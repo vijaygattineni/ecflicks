@@ -11,23 +11,27 @@
  * Controller of the emoviesApp
  */
 angular.module('emoviesApp')
-  .controller('MovieCtrl', function (videoService) {
+  .controller('MovieCtrl', function (videoService, $rootScope) {
     var self = this;
+    self.currentState = 'Movies';
+
+    self.formatForCarouselList = function (premiumVideosList) {
+      var premiumSubLists = [];
+      for (var i = 0; i <= premiumVideosList.relatedResults.length / 4; i++) {
+        premiumSubLists.push(premiumVideosList.relatedResults.splice(0, 4));
+      }
+      return premiumSubLists;
+    };
 
     var init = function () {
       videoService.getTop4Movies().then(function (response) {
         self.top4VideosList = response.data;
-        console.log("Top4 Movies -->>", self.top4VideosList);
       });
-
       videoService.getPremiumMovies().then(function (response) {
-        self.premiumVideosList = response.data;
-        console.log("Premium movies -->>", self.premiumVideosList);
+        self.premiumVideoSubLists = self.formatForCarouselList(response.data);
       });
-
       videoService.getSubscriptionMovies().then(function (response) {
-        self.subscriptionVideosList = response.data;
-        console.log("Subs movies -->>", self.subscriptionVideosList);
+        self.subscriptionVideosList = self.formatForCarouselList(response.data);
       });
     };
 

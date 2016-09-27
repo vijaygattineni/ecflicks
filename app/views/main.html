@@ -2,12 +2,6 @@
   <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container header-container">
       <div class="navbar-header">
-        <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">-->
-          <!--<span class="sr-only">Toggle navigation</span>-->
-          <!--<span class="icon-bar"></span>-->
-          <!--<span class="icon-bar"></span>-->
-          <!--<span class="icon-bar"></span>-->
-        <!--</button>-->
         <a class="navbar-brand">eClineFlicks</a>
         <div class="visible-xs hidden-sm hidden-md hidden-lg pull-right mobile-search-box">
               <input type="text" class="input-search-box form-control" placeholder="Search">
@@ -23,16 +17,24 @@
 
       <div class="hidden-xs">
         <ul class="nav navbar-nav">
-          <li><a ng-click="navigate('movies')" ng-class="{'isActive':moviesTabActive}">Movies</a></li>
-          <li><a ng-click="navigate('tv')" ng-class="{'isActive':tvTabActive}">TV</a></li>
-          <!--<li><a ng-href="#/">Sports</a></li>-->
-          <!--<li><a ui-sref="root.about">About</a></li>-->
+          <li ><a ui-sref="root.movies">Movies</a></li>
+          <li ><a ui-sref="root.TVShows">TV</a></li>
         </ul>
         <ul class="nav navbar-nav hidden-xs pull-right">
           <li>
-            <input type="text" class="input-search-box form-control" placeholder="Search">
-            <div>
-              <!--<span>Search results..</span>-->
+              <form name="searchForm">
+                <input type="text" id="search-videos-input" ng-model="main.searchInput" class="input-search-box form-control" placeholder="Search" ng-change="main.getSuggestions(main.searchInput)">
+              </form>
+            <div class="row suggestions-container">
+              <div class="row search-results-section" ng-repeat="item in main.suggestionResults">
+                <div class="col-xs-3 suggestion-image-cont">
+                <span class="fa fa-film fa-2x"></span>
+              </div>
+                <div class="col-xs-9">
+                  <span ng-bind="item.title"></span>
+                </div>
+                <hr>
+              </div>
             </div>
           </li>
           <li>

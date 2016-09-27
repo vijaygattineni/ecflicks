@@ -13,19 +13,25 @@
 angular.module('emoviesApp')
   .controller('TVShowsCtrl', function (videoService) {
     var self = this;
+    self.currentState = 'TVShows';
+
+    self.formatForCarouselList = function (premiumVideosList) {
+      var premiumSubLists = [];
+      for (var i = 0; i <= premiumVideosList.relatedResults.length / 4; i++) {
+        premiumSubLists.push(premiumVideosList.relatedResults.splice(0, 4));
+      }
+      return premiumSubLists;
+    };
 
     var init = function () {
       videoService.getTop4TvShows().then(function (response) {
         self.top4VideosList = response.data;
-        console.log("Top4 Movies -->>", self.top4VideosList);
       });
       videoService.getPremiumTVShows().then(function (response) {
-        self.premiumVideosList = response.data;
-        console.log("Premium TVShows -->>", self.premiumVideosList);
+        self.premiumVideoSubLists = self.formatForCarouselList(response.data);
       });
       videoService.getSubscriptionTVShows().then(function (response) {
-        self.subscriptionVideosList = response.data;
-        console.log("Subs TVShows -->>", self.subscriptionVideosList);
+        self.subscriptionVideosList = self.formatForCarouselList(response.data);
       });
     };
 

@@ -7,7 +7,7 @@
       "description": "A comedy and romantic love story of chennai girl and Mumbai guy",
       "genere": "Action",
       "country":"India",
-      "posterurl":"chennaiexpress.png",
+      "posterUrl":"images/chennaiexpress.jpg",
       "duration": "180 Min",
       "type": "subscription",
       "id":"013"
@@ -18,7 +18,7 @@
       "description": "A nature lover met a gangster who fight for people rights",
       "genere": "Action",
       "country":"India",
-      "posterurl":"janatha.png",
+      "posterUrl":"images/janatha.jpg",
       "duration": "220 Min",
       "type": "subscription",
       "id":"014"
@@ -29,7 +29,7 @@
       "description": "A comedy and romantic love story of chennai girl and Mumbai guy",
       "genere": "Action",
       "country":"US/UK",
-      "posterurl":"ironman2.png",
+      "posterUrl":"images/ironman2.jpg",
       "duration": "180 Min",
       "type": "subscription",
       "id":"015"
@@ -40,18 +40,18 @@
       "description": "An interesting action movie on time travel",
       "genere": "Action",
       "country":"India",
-      "posterurl":"24.png",
+      "posterUrl":"images/24.jpg",
       "duration": "250 Min",
       "type": "subscription",
       "id":"016"
     },
     {
-      "title" :"Iron Man 2",
+      "title" :"Troy",
       "language": "English",
       "description": "The story of war between two nations and how they fought for victory",
       "genere": "Action",
       "country":"US/UK",
-      "posterurl":"troy.png",
+      "posterUrl":"images/troy.jpg",
       "duration": "180 Min",
       "type": "subscription",
       "id":"015"
@@ -62,7 +62,7 @@
       "description": "A nature lover met a gangster who fight for people rights",
       "genere": "Action",
       "country":"India",
-      "posterurl":"janatha.png",
+      "posterUrl":"images/janatha.jpg",
       "duration": "220 Min",
       "type": "subscription",
       "id":"016"
@@ -73,7 +73,7 @@
       "description": "A comedy and romantic love story of chennai girl and Mumbai guy",
       "genere": "Action",
       "country":"US/UK",
-      "posterurl":"ironman2.png",
+      "posterUrl":"images/ironman2.jpg",
       "duration": "180 Min",
       "type": "subscription",
       "id":"017"
@@ -84,7 +84,7 @@
       "description": "An interesting action movie on time travel",
       "genere": "Action",
       "country":"India",
-      "posterurl":"24.png",
+      "posterUrl":"images/24.jpg",
       "duration": "250 Min",
       "type": "subscription",
       "id":"018"

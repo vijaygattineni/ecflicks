@@ -1,0 +1,40 @@
+{
+  "videosType": "Top 4",
+  "relatedResults": [
+    {
+      "title": "How I Met Your Mother",
+      "language": "English",
+      "description": "Action love story",
+      "genere": "Action",
+      "country": "India",
+      "posterUrl": "images/howimetumother.png",
+      "duration": "180 Min",
+      "year": "2016",
+      "type": "open",
+      "id":"003"
+    },
+    {
+      "title": "Comedy Nights Kapil Sharma",
+      "language": "English",
+      "description": "Comedy",
+      "genere": "Action",
+      "country": "US/UK",
+      "posterUrl": "images/tksp.jpg",
+      "duration": "120 Min",
+      "year": "2009",
+      "type": "open",
+      "id":"004"
+    },{
+      "title": "How I Met Your Mother",
+      "language": "English",
+      "description": "Action love story",
+      "genere": "Action",
+      "country": "India",
+      "posterUrl": "images/howimetyourmother.png",
+      "duration": "180 Min",
+      "year": "2016",
+      "type": "open",
+      "id":"003"
+    }
+  ]
+}
