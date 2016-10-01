@@ -17,8 +17,8 @@ angular.module('emoviesApp')
 
     self.formatForCarouselList = function (premiumVideosList) {
       var premiumSubLists = [];
-      for (var i = 0; i <= premiumVideosList.relatedResults.length / 4; i++) {
-        premiumSubLists.push(premiumVideosList.relatedResults.splice(0, 4));
+      for (var i = 0; i <= premiumVideosList.length / 4; i++) {
+        premiumSubLists.push(premiumVideosList.splice(0, 4));
       }
       return premiumSubLists;
     };

@@ -1,6 +1,15 @@
 {
   "name": "emovies",
   "private": true,
+  "author": "Vijay Gattineni",
+  "dependencies": {
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "mongoose": "~3.6.13",
+    "serve-favicon": "~2.3.0"
+  },
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
     "grunt": "^0.4.5",

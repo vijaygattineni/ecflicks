@@ -10,7 +10,7 @@
       "posterUrl":"images/chennaiexpress.jpg",
       "duration": "180 Min",
       "type": "subscription",
-      "id":"013"
+      "url": "/images/The_Jungle_Book_2016.mp4"
     },
     {
       "title" :"Janatha Garage",
@@ -21,7 +21,7 @@
       "posterUrl":"images/janatha.jpg",
       "duration": "220 Min",
       "type": "subscription",
-      "id":"014"
+      "url": "/images/The_Jungle_Book_2016.mp4"
     },
     {
       "title" :"Iron Man 2",
@@ -32,7 +32,7 @@
       "posterUrl":"images/ironman2.jpg",
       "duration": "180 Min",
       "type": "subscription",
-      "id":"015"
+      "url": "/images/The_Jungle_Book_2016.mp4"
     },
     {
       "title" :"24",
@@ -43,7 +43,7 @@
       "posterUrl":"images/24.jpg",
       "duration": "250 Min",
       "type": "subscription",
-      "id":"016"
+      "url": "/images/The_Jungle_Book_2016.mp4"
     },
     {
       "title" :"Troy",

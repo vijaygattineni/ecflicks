@@ -4,6 +4,7 @@
 'use strict';
 angular.module('emoviesApp')
   .service('videoService', function ($http, $q) {
+    var baseUrl = 'http://localhost:8000/api/movies';
     return {
       getTop4Movies: function () {
         var top4URL = 'fixtures/top4.json';
@@ -16,7 +17,7 @@ angular.module('emoviesApp')
           });
       },
       getPremiumMovies: function () {
-        var premiumMoviesUrl = 'fixtures/premiumMovies.json';
+        var premiumMoviesUrl = baseUrl+'/premium';
         return $http.get(premiumMoviesUrl).then(function (response) {
             return response;
           },
@@ -25,7 +26,7 @@ angular.module('emoviesApp')
           });
       },
       getSubscriptionMovies: function () {
-        var subscriptionMoviesUrl = 'fixtures/subscriptionMovies.json';
+        var subscriptionMoviesUrl = baseUrl+'/subscription';
         return $http.get(subscriptionMoviesUrl).then(function (response) {
           return response;
         }, function (err) {

@@ -11,7 +11,7 @@
       "duration": "90 Min",
       "year": "2016",
       "type": "premium",
-      "id": "005"
+      "videoUrl": "/images/The_Jungle_Book_2016.mp4"
     },
     {
       "title" :"Baahubali",
@@ -23,7 +23,7 @@
       "duration": "150 Min",
       "year": "2015",
       "type": "premium",
-      "id":"006"
+      "videoUrl": "/images/The_Jungle_Book_2016.mp4"
     },
     {
       "title" :"300",
@@ -35,7 +35,7 @@
       "duration": "120 Min",
       "year": "2012",
       "type": "premium",
-      "id":"007"
+      "videoUrl": "/images/The_Jungle_Book_2016.mp4"
     },
     {
       "title" :"Bajrangi bhaai jaan",
@@ -47,7 +47,7 @@
       "duration": "90 Min",
       "year": "2016",
       "type": "premium",
-      "id":"008"
+      "videoUrl": "/images/The_Jungle_Book_2016.mp4"
     },
     {
       "title": "Jungle Book",
@@ -59,7 +59,7 @@
       "duration": "90 Min",
       "year": "2016",
       "type": "premium",
-      "id": "009"
+      "videoUrl": "/images/The_Jungle_Book_2016.mp4"
     },
     {
       "title" :"Baahubali",
@@ -71,7 +71,7 @@
       "duration": "150 Min",
       "year": "2015",
       "type": "premium",
-      "id":"010"
+      "videoUrl": "/images/The_Jungle_Book_2016.mp4"
     },
     {
       "title" :"300",
@@ -83,7 +83,7 @@
       "duration": "120 Min",
       "year": "2012",
       "type": "premium",
-      "id":"011"
+      "videoUrl": "/images/The_Jungle_Book_2016.mp4"
     },
     {
       "title" :"Bajrangi bhaai jaan",
@@ -95,7 +95,8 @@
       "duration": "90 Min",
       "year": "2016",
       "type": "premium",
-      "id":"012"
+      "videoUrl": "/images/The_Jungle_Book_2016.mp4"
     }
   ]
 }
+
