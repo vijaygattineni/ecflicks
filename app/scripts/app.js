@@ -17,4 +17,4 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router'
-  ])
+  ]);

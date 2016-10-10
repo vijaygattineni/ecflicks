@@ -38,7 +38,7 @@ angular.module('emoviesApp').config(function ($stateProvider, $urlRouterProvider
       }
     }
   }).state('root.summary', {
-    url: '/summary',
+    url: '/summary/:type',
     views: {
       'body': {
         templateUrl: '/views/summary.html',

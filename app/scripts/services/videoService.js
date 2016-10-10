@@ -17,8 +17,9 @@ angular.module('emoviesApp')
           });
       },
       getPremiumMovies: function () {
-        var premiumMoviesUrl = baseUrl+'/premium';
-        return $http.get(premiumMoviesUrl).then(function (response) {
+        //var premiumMoviesUrl = baseUrl+'/premium';
+        var premiumMoviesFixtureUrl = 'fixtures/premiumMovies.json';
+        return $http.get(premiumMoviesFixtureUrl).then(function (response) {
             return response;
           },
           function (err) {
@@ -26,8 +27,9 @@ angular.module('emoviesApp')
           });
       },
       getSubscriptionMovies: function () {
-        var subscriptionMoviesUrl = baseUrl+'/subscription';
-        return $http.get(subscriptionMoviesUrl).then(function (response) {
+        //var subscriptionMoviesUrl = baseUrl+'/subscription';
+        var subscriptionMoviesFixtureUrl = 'fixtures/subscriptionMovies.json';
+        return $http.get(subscriptionMoviesFixtureUrl).then(function (response) {
           return response;
         }, function (err) {
           return $q.reject(err);

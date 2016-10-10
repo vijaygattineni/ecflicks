@@ -28,7 +28,7 @@
   <!--Movies List-->
   <div class="row movies-list-container">
     <div class="head-cont">
-      <a class="movies-header">
+      <a class="movies-header" ui-sref="root.summary({'type': 'Premium'+videos.currentState})">
         <span class="movies-type">Premium {{videos.currentState}}</span> <span class="fa fa-chevron-right fa-icon"></span>
       </a>
     </div>
@@ -67,7 +67,7 @@
   <!--Movies List Repeat-->
   <div class="row movies-list-container">
     <div class="head-cont">
-      <a class="movies-header">
+      <a class="movies-header" ui-sref="root.summary({'type': 'Subscription'+videos.currentState})">
         <span class="movies-type">Subscription {{videos.currentState}}</span> <span class="fa fa-chevron-right fa-icon"></span>
       </a>
     </div>

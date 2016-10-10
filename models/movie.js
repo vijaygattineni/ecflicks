@@ -13,8 +13,10 @@ var movieSchema = new Schema({
     genere: String,
     country: String,
     posterUrl: String,
-    duration: String,
+    duration: Number,
+    year: Number,
     type: String,
+    year: Number,
     url: String
 },{ collection : 'movieCollection' });
 

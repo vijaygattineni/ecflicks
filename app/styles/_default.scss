@@ -113,6 +113,7 @@ body {
     transition: 500ms;
     padding-left: 40px;
     background: url(/images/search-icon-input.png) no-repeat 3px center;
+    margin-right: 20px;
   }
   .input-search-box:focus {
     width: 300px;
@@ -142,11 +143,14 @@ body {
   }
   .user-icon {
     padding-top: 10px !important;
-    padding-bottom: 0px !important;
+    padding-bottom: 10px !important;
     color: #777;
     font-size: 16px;
     text-align: center;
-    width: 100px;
+    margin-right: 10px;
+  }
+  .dropdown-menu {
+    min-width: 130px;
   }
   .suggestions-container {
     left: 15px;

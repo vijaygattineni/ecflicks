@@ -1,99 +1,33 @@
 
 <div class="filter-container">
-  <div>
-    <span>Filter By: Premium</span>
-    <select class="selectpicker">
-      <option value="volvo">Premium</option>
-      <option value="saab">Subscription</option>
-      <option value="opel">All</option>
-      <option value="audi">Free</option>
-    </select>
-    <span style="padding-left: 30px">Sort By: Language</span>
-    <select class="selectpicker">
-      <option value="volvo">Recent</option>
-      <option value="saab">Popular</option>
-      <option value="opel">Duration</option>
-    </select>
+  <span class="title" ng-bind="summary.title">
+  </span>
 
-  </div>
+  <span>
+    <span style="padding-left: 30px">Sort By: </span>
+    <select ng-model="summary.sortOption"
+            ng-options="opt.key as opt.value for opt in summary.sortOptions">
+    </select>
+  </span>
+
+    <span>
+    <span style="padding-left: 30px">Language: </span>
+       <select ng-model="summary.languageOption"
+               ng-options="opt.key as opt.value for opt in summary.languageOptions">
+       </select>
+  </span>
 </div>
 
 <div class="summary-container">
   <div class="row videos-container">
-    <div class="col-xs-6 col-sm-4 col-md-3">
+    <div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="video in summary.resultList | orderBy: summary.sortOption : reverse : false | filter : { 'language' : summary.languageOption}">
       <div class="panel panel-default my_panel">
         <div class="panel-body">
-          <img ng-src="images/highwayonplate.png" alt="" class="img-responsive center-block"/>
+          <img ng-src="{{video.posterUrl}}" alt="" class="img-responsive center-block"/>
         </div>
         <div class="panel-footer">
-          <h4> Movie Title1</h4>
-          <span>Telugu</span> <span> Action</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-6 col-sm-4 col-md-3">
-      <div class="panel panel-default my_panel">
-        <div class="panel-body">
-          <img ng-src="images/highwayonplate.png" alt="" class="img-responsive center-block"/>
-        </div>
-        <div class="panel-footer">
-          <h4> Movie Title1</h4>
-          <span>Telugu</span> <span> Action</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-6 col-sm-4 col-md-3">
-      <div class="panel panel-default my_panel">
-        <div class="panel-body">
-          <img ng-src="images/highwayonplate.png" alt="" class="img-responsive center-block"/>
-        </div>
-        <div class="panel-footer">
-          <h4> Movie Title1</h4>
-          <span>Telugu</span> <span> Action</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-6 col-sm-4 col-md-3">
-      <div class="panel panel-default my_panel">
-        <div class="panel-body">
-          <img ng-src="images/highwayonplate.png" alt="" class="img-responsive center-block"/>
-        </div>
-        <div class="panel-footer">
-          <h4> Movie Title1</h4>
-          <span>Telugu</span> <span> Action</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-6 col-sm-4 col-md-3">
-      <div class="panel panel-default my_panel">
-        <div class="panel-body">
-          <img ng-src="images/highwayonplate.png" alt="" class="img-responsive center-block"/>
-        </div>
-        <div class="panel-footer">
-          <h4> Movie Title1</h4>
-          <span>Telugu</span> <span> Action</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-6 col-sm-4 col-md-3">
-      <div class="panel panel-default my_panel">
-        <div class="panel-body">
-          <img ng-src="images/highwayonplate.png" alt="" class="img-responsive center-block"/>
-        </div>
-        <div class="panel-footer">
-          <h4> Movie Title1</h4>
-          <span>Telugu</span> <span> Action</span>
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-6 col-sm-4 col-md-3">
-      <div class="panel panel-default my_panel">
-        <div class="panel-body">
-          <img ng-src="images/highwayonplate.png" alt="" class="img-responsive center-block"/>
-        </div>
-        <div class="panel-footer">
-          <h4> Movie Title1</h4>
-          <span>Telugu</span> <span> Action</span>
+          <h4 ng-bind="video.title"></h4>
+          <span ng-bind="video.language"></span> <span ng-bind="video.genere"></span>
         </div>
       </div>
     </div>

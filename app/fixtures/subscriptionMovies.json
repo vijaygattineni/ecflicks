@@ -1,93 +1,90 @@
-{
-  "videosType" : "Subscription Movies",
-  "relatedResults" : [
-    {
-      "title" :"Chennai express",
-      "language": "Hindi",
-      "description": "A comedy and romantic love story of chennai girl and Mumbai guy",
-      "genere": "Action",
-      "country":"India",
-      "posterUrl":"images/chennaiexpress.jpg",
-      "duration": "180 Min",
-      "type": "subscription",
-      "url": "/images/The_Jungle_Book_2016.mp4"
-    },
-    {
-      "title" :"Janatha Garage",
-      "language": "Telugu",
-      "description": "A nature lover met a gangster who fight for people rights",
-      "genere": "Action",
-      "country":"India",
-      "posterUrl":"images/janatha.jpg",
-      "duration": "220 Min",
-      "type": "subscription",
-      "url": "/images/The_Jungle_Book_2016.mp4"
-    },
-    {
-      "title" :"Iron Man 2",
-      "language": "English",
-      "description": "A comedy and romantic love story of chennai girl and Mumbai guy",
-      "genere": "Action",
-      "country":"US/UK",
-      "posterUrl":"images/ironman2.jpg",
-      "duration": "180 Min",
-      "type": "subscription",
-      "url": "/images/The_Jungle_Book_2016.mp4"
-    },
-    {
-      "title" :"24",
-      "language": "Tamil",
-      "description": "An interesting action movie on time travel",
-      "genere": "Action",
-      "country":"India",
-      "posterUrl":"images/24.jpg",
-      "duration": "250 Min",
-      "type": "subscription",
-      "url": "/images/The_Jungle_Book_2016.mp4"
-    },
-    {
-      "title" :"Troy",
-      "language": "English",
-      "description": "The story of war between two nations and how they fought for victory",
-      "genere": "Action",
-      "country":"US/UK",
-      "posterUrl":"images/troy.jpg",
-      "duration": "180 Min",
-      "type": "subscription",
-      "id":"015"
-    },
-    {
-      "title" :"Janatha Garage",
-      "language": "Telugu",
-      "description": "A nature lover met a gangster who fight for people rights",
-      "genere": "Action",
-      "country":"India",
-      "posterUrl":"images/janatha.jpg",
-      "duration": "220 Min",
-      "type": "subscription",
-      "id":"016"
-    },
-    {
-      "title" :"Iron Man 2",
-      "language": "English",
-      "description": "A comedy and romantic love story of chennai girl and Mumbai guy",
-      "genere": "Action",
-      "country":"US/UK",
-      "posterUrl":"images/ironman2.jpg",
-      "duration": "180 Min",
-      "type": "subscription",
-      "id":"017"
-    },
-    {
-      "title" :"24",
-      "language": "Tamil",
-      "description": "An interesting action movie on time travel",
-      "genere": "Action",
-      "country":"India",
-      "posterUrl":"images/24.jpg",
-      "duration": "250 Min",
-      "type": "subscription",
-      "id":"018"
-    }
-  ]
-}
+[
+  {
+    "title": "Chennai express",
+    "language": "Hindi",
+    "description": "A comedy and romantic love story of chennai girl and Mumbai guy",
+    "genere": "Action",
+    "country": "India",
+    "posterUrl": "images/chennaiexpress.jpg",
+    "duration": "180",
+    "type": "subscription",
+    "url": "/images/The_Jungle_Book_2016.mp4"
+  },
+  {
+    "title": "Janatha Garage",
+    "language": "Telugu",
+    "description": "A nature lover met a gangster who fight for people rights",
+    "genere": "Action",
+    "country": "India",
+    "posterUrl": "images/janatha.jpg",
+    "duration": "220",
+    "type": "subscription",
+    "url": "/images/The_Jungle_Book_2016.mp4"
+  },
+  {
+    "title": "Iron Man 2",
+    "language": "English",
+    "description": "A comedy and romantic love story of chennai girl and Mumbai guy",
+    "genere": "Action",
+    "country": "US/UK",
+    "posterUrl": "images/ironman2.jpg",
+    "duration": "180",
+    "type": "subscription",
+    "url": "/images/The_Jungle_Book_2016.mp4"
+  },
+  {
+    "title": "24",
+    "language": "Tamil",
+    "description": "An interesting action movie on time travel",
+    "genere": "Action",
+    "country": "India",
+    "posterUrl": "images/24.jpg",
+    "duration": "130",
+    "type": "subscription",
+    "url": "/images/The_Jungle_Book_2016.mp4"
+  },
+  {
+    "title": "Troy",
+    "language": "English",
+    "description": "The story of war between two nations and how they fought for victory",
+    "genere": "Action",
+    "country": "US/UK",
+    "posterUrl": "images/troy.jpg",
+    "duration": "180",
+    "type": "subscription",
+    "id": "015"
+  },
+  {
+    "title": "Janatha Garage",
+    "language": "Telugu",
+    "description": "A nature lover met a gangster who fight for people rights",
+    "genere": "Action",
+    "country": "India",
+    "posterUrl": "images/janatha.jpg",
+    "duration": "150",
+    "type": "subscription",
+    "id": "016"
+  },
+  {
+    "title": "Iron Man 2",
+    "language": "English",
+    "description": "A comedy and romantic love story of chennai girl and Mumbai guy",
+    "genere": "Action",
+    "country": "US/UK",
+    "posterUrl": "images/ironman2.jpg",
+    "duration": "120",
+    "type": "subscription",
+    "id": "017"
+  },
+  {
+    "title": "24",
+    "language": "Tamil",
+    "description": "An interesting action movie on time travel",
+    "genere": "Action",
+    "country": "India",
+    "posterUrl": "images/24.jpg",
+    "duration": "170",
+    "type": "subscription",
+    "id": "018"
+  }
+]

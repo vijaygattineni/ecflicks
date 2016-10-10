@@ -3,33 +3,36 @@
     <div class="container header-container">
       <div class="navbar-header">
         <a class="navbar-brand">eClineFlicks</a>
+
         <div class="visible-xs hidden-sm hidden-md hidden-lg pull-right mobile-search-box">
-              <input type="text" class="input-search-box form-control" placeholder="Search">
+          <input type="text" class="input-search-box form-control" placeholder="Search">
         </div>
       </div>
 
       <div class="visible-xs-* hidden-sm hidden-md hidden-lg">
         <ul class="list-unstyled list-inline">
-          <li><a ng-href="#/" >Movies</a></li>
+          <li><a ng-href="#/">Movies</a></li>
           <li><a ng-href="#/">TV</a></li>
         </ul>
       </div>
 
       <div class="hidden-xs">
         <ul class="nav navbar-nav">
-          <li ><a ui-sref="root.movies">Movies</a></li>
-          <li ><a ui-sref="root.TVShows">TV</a></li>
+          <li><a ui-sref="root.movies">Movies</a></li>
+          <li><a ui-sref="root.TVShows">TV</a></li>
         </ul>
         <ul class="nav navbar-nav hidden-xs pull-right">
           <li>
-              <form name="searchForm">
-                <input type="text" id="search-videos-input" ng-model="main.searchInput" class="input-search-box form-control" placeholder="Search" ng-change="main.getSuggestions(main.searchInput)">
-              </form>
+            <form name="searchForm">
+              <input type="text" id="search-videos-input" ng-model="main.searchInput"
+                     class="input-search-box form-control" placeholder="Search"
+                     ng-change="main.getSuggestions(main.searchInput)">
+            </form>
             <div class="row suggestions-container">
               <div class="row search-results-section" ng-repeat="item in main.suggestionResults">
                 <div class="col-xs-3 suggestion-image-cont">
-                <span class="fa fa-film fa-2x"></span>
-              </div>
+                  <span class="fa fa-film fa-2x"></span>
+                </div>
                 <div class="col-xs-9">
                   <span ng-bind="item.title"></span>
                 </div>
@@ -38,8 +41,7 @@
             </div>
           </li>
           <li>
-            <a class="user-icon" ng-href="#/" data-toggle="popover" data-placement="bottom" data-content="Sign In">
-              <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+            <a data-toggle="modal" data-target="#signInModal">Log In
             </a>
           </li>
         </ul>
@@ -49,6 +51,45 @@
 </div>
 
 <div ui-view="body" class="main-body"></div>
+
+<!-- Modal -->
+<div class="modal fade login" id="signInModal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span ng-show="!main.showLogin" class="back-nav-signIn-text" ng-click="main.showLogin = !main.showLogin"><a> < Sign In</a></span>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div ng-show="main.showLogin" class="login">
+          <form class="form-signin">
+            <h2 class="form-signin-heading">Please login</h2>
+            <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+            <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+            <label class="checkbox">
+              <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+            </label>
+            <div class="signup-text" ng-click="main.showLogin = !main.showLogin"><a>First time on eCineFlicks? Please SignUp</a></div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+          </form>
+        </div>
+        <div ng-show="!main.showLogin" class="signUp" >
+          <form class="form-signin">
+            <h2 class="form-signin-heading">Please SignUp</h2>
+            <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+            <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+            <input type="password" class="form-control" name="password" placeholder="Confirm Password" required=""/>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">SignUp</button>
+          </form>
+        </div>
+      </div>
+      <!--<div class="modal-footer">-->
+        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>
 
 <div class="footer">
   <div class="container">
