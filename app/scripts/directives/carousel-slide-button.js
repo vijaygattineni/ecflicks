@@ -2,7 +2,7 @@
  * Created by vgattineni on 9/23/16.
  */
 'use strict';
-angular.module('emoviesApp').directive('carouselSlideButton', function () {
+angular.module('emoviesApp').directive('carouselSlideButton', [function () {
    return {
      restrict : 'A',
      link: function (scope, element, attr) {
@@ -12,4 +12,4 @@ angular.module('emoviesApp').directive('carouselSlideButton', function () {
        });
      }
    };
-});
+}]);

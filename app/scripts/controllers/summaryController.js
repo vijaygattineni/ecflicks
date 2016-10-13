@@ -10,7 +10,7 @@
  * # SummaryCtrl
  * Controller of the emoviesApp
  */
-angular.module('emoviesApp').controller('SummaryCtrl', function (videoService, $stateParams) {
+angular.module('emoviesApp').controller('SummaryCtrl', ['videoService', '$stateParams', function (videoService, $stateParams) {
   var self = this;
 
   self.sortOption = '';
@@ -61,4 +61,4 @@ angular.module('emoviesApp').controller('SummaryCtrl', function (videoService, $
   };
 
   init();
-});
+}]);

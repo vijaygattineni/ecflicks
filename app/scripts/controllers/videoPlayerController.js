@@ -11,7 +11,7 @@
  * Controller of the emoviesApp
  */
 angular.module('emoviesApp')
-  .controller('VideoCtrl', function ($stateParams) {
+  .controller('VideoCtrl', ['$stateParams', function ($stateParams) {
     var self = this;
     self.videoName = $stateParams.videoName;
     self.videoId = $stateParams.videoId;
@@ -28,4 +28,4 @@ angular.module('emoviesApp')
     };
 
     this.init();
-  });
+  }]);

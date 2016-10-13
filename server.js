@@ -13,6 +13,7 @@ var movieRoutes = require('./routes/moviesRoutes');
 // configure app to use bodyParser() this will let us get the data from a POST
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/app'));
 
 var port = process.env.PORT || 8000;        // set our port from env or use 8000
 
@@ -21,17 +22,6 @@ app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
   next();
-});
-
-// middleware to use for all requests
-app.use(function (req, res, next) {
-  // do logging
-  if (true) {
-    console.log('Authenticated user');
-    next();   // make sure we go to the next routes and don't stop here
-  } else {
-    res.sendStatus(403);
-  }
 });
 
 // Register routes

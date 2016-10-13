@@ -1,0 +1,303 @@
+.home-container .movies-list-container .movieListCarousel .carousel-inner .panel-body:hover img, .home-container .movies-list-container .subscriptionVideoCarousal .carousel-inner .panel-body:hover img, .summary-container .videos-container .panel-body:hover img {
+  transform: scale(1.1)
+}
+
+.browsehappy {
+  margin: .2em 0;
+  background: #ccc;
+  color: #000;
+  padding: .2em 0
+}
+
+body {
+  padding: 0;
+  background-color: #fff
+}
+
+.footer, .header, .marketing {
+  padding-left: 0;
+  padding-right: 0
+}
+
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px
+}
+
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5
+}
+
+.container-narrow > hr {
+  margin: 30px 0
+}
+
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5
+}
+
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px
+}
+
+.marketing {
+  margin: 40px 0
+}
+
+.header .navbar-default, .header-container .list-inline {
+  margin-bottom: 0
+}
+
+.marketing p + h4 {
+  margin-top: 28px
+}
+
+@media screen and (min-width: 768px) {
+  .footer, .header, .marketing {
+    padding-left: 0;
+    padding-right: 0
+  }
+
+  .jumbotron {
+    border-bottom: 0
+  }
+}
+
+.header-container .input-search-box, .header-container .input-search-box:focus {
+  transition: .5s;
+  padding-left: 40px;
+  background: url(/images/search-icon-input.2dfd1247.png) 3px center no-repeat
+}
+
+.navbar-brand {
+  font-size: 22px
+}
+
+.navbar-nav {
+  font-size: 18px
+}
+
+.header-container .mobile-search-box {
+  margin-right: 20px
+}
+
+.header-container .input-search-box {
+  width: 150px;
+  margin-top: 10px;
+  margin-right: 20px
+}
+
+.header-container .input-search-box:focus {
+  width: 300px
+}
+
+.home-container .movies-list-container .movieListCarousel .carousel-inner .panel-body img, .home-container .movies-list-container .subscriptionVideoCarousal .carousel-inner .panel-body img, .summary-container .videos-container .panel-body img {
+  max-width: 100%;
+  transition: all .5s
+}
+
+.header-container .list-inline li {
+  color: #fff;
+  width: 70px;
+  text-align: center
+}
+
+.header-container .list-inline li a {
+  color: #777;
+  font-size: 18px;
+  font-weight: 400
+}
+
+.header-container .list-inline li .active {
+  font-weight: 500;
+  border: solid #777
+}
+
+.header-container .navbar-nav > li > a:focus {
+  font-weight: 500
+}
+
+.header-container .user-icon {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  color: #777;
+  font-size: 16px;
+  text-align: center;
+  margin-right: 10px
+}
+
+.header-container .dropdown-menu {
+  min-width: 130px
+}
+
+.header-container .suggestions-container {
+  left: 15px;
+  max-height: 300px;
+  width: 300px;
+  overflow: auto;
+  position: absolute;
+  border-radius: 3%;
+  background-color: #e5e5e5
+}
+
+.header-container .suggestion-image-cont {
+  text-align: right
+}
+
+.header-container .search-results-section {
+  border: 1px solid #fff;
+  border-radius: 3%;
+  padding: 5px;
+  margin: 5px;
+  background-color: #f7f7f7
+}
+
+.main-body {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px
+}
+
+.home-container .carousel-inner > .item > a > img, .home-container .carousel-inner > .item > img {
+  width: 100%
+}
+
+.home-container .movieCarouselImg img {
+  width: auto;
+  height: 300px;
+  max-height: 300px
+}
+
+.home-container .movies-list-container {
+  margin: 25px 0
+}
+
+.home-container .movies-list-container .head-cont {
+  color: #777;
+  margin-bottom: 15px
+}
+
+.home-container .movies-list-container .movies-header {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #777
+}
+
+.home-container .movies-list-container .movies-header .movies-type {
+  padding-right: 15px
+}
+
+.home-container .movies-list-container .movies-header .fa-icon {
+  vertical-align: middle
+}
+
+.home-container .movies-list-container .movieListCarousel .carousel-inner, .home-container .movies-list-container .subscriptionVideoCarousal .carousel-inner {
+  width: 90%;
+  margin: auto
+}
+
+.home-container .movies-list-container .movieListCarousel .carousel-inner .fixed-panel, .home-container .movies-list-container .subscriptionVideoCarousal .carousel-inner .fixed-panel {
+  min-height: 200px;
+  max-height: 200px
+}
+
+.home-container .movies-list-container .movieListCarousel .carousel-inner .panel-body, .home-container .movies-list-container .subscriptionVideoCarousal .carousel-inner .panel-body {
+  max-height: 300px;
+  overflow: hidden;
+  padding: 0
+}
+
+.home-container .movies-list-container .movieListCarousel .carousel-control, .home-container .movies-list-container .subscriptionVideoCarousal .carousel-control {
+  width: 0
+}
+
+@media (max-width: 768px) {
+  .home-container .topMovieCarousel {
+    margin-left: -50px;
+    margin-right: -50px
+  }
+}
+
+.summary-container .videos-container {
+  padding: 70px 0 10px
+}
+
+.summary-container .videos-container .panel-body {
+  max-height: 200px;
+  overflow: hidden;
+  padding: 0
+}
+
+.filter-container {
+  width: 92%;
+  padding: 15px 0;
+  position: fixed;
+  z-index: 999;
+  background-color: #fff
+}
+
+.filter-container .title {
+  font-size: 18px;
+  font-weight: 500
+}
+
+.login .model-content, .signUp .model-content {
+  min-width: 400px !important
+}
+
+.login .model-content .back-nav-signIn-text, .signUp .model-content .back-nav-signIn-text {
+  font-size: 18px;
+  color: #1d71b8
+}
+
+.login .form-signin, .signUp .form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, .1)
+}
+
+.login .form-signin .checkbox, .login .form-signin .form-signin-heading, .signUp .form-signin .checkbox, .signUp .form-signin .form-signin-heading {
+  margin-bottom: 30px
+}
+
+.login .form-signin .checkbox, .signUp .form-signin .checkbox {
+  font-weight: 400
+}
+
+.login .form-signin .form-control, .signUp .form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px
+}
+
+.login .form-signin .form-control:focus, .signUp .form-signin .form-control:focus {
+  z-index: 2
+}
+
+.login .form-signin input[type=text], .signUp .form-signin input[type=text] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0
+}
+
+.login .form-signin input[type=password], .signUp .form-signin input[type=password] {
+  margin-bottom: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0
+}
+
+.login .form-signin .signup-text, .signUp .form-signin .signup-text {
+  padding-bottom: 20px;
+  color: #1d71b8;
+  text-align: center
+}

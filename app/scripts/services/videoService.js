@@ -3,7 +3,7 @@
  */
 'use strict';
 angular.module('emoviesApp')
-  .service('videoService', function ($http, $q) {
+  .service('videoService', [ '$http', '$q', function ($http, $q) {
     var baseUrl = 'http://localhost:8000/api/movies';
     return {
       getTop4Movies: function () {
@@ -75,4 +75,4 @@ angular.module('emoviesApp')
         });
       }
     };
-  });
+  }]);

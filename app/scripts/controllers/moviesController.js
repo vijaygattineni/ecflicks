@@ -11,7 +11,7 @@
  * Controller of the emoviesApp
  */
 angular.module('emoviesApp')
-  .controller('MovieCtrl', function (videoService, $rootScope) {
+  .controller('MovieCtrl', ['videoService', function (videoService) {
     var self = this;
     self.currentState = 'Movies';
 
@@ -37,4 +37,4 @@ angular.module('emoviesApp')
 
     init();
 
-  });
+  }]);

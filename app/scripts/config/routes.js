@@ -2,7 +2,7 @@
  * Created by vgattineni on 9/13/16.
  */
 'use strict';
-angular.module('emoviesApp').config(function ($stateProvider, $urlRouterProvider) {
+angular.module('emoviesApp').config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise('/movies');
 
@@ -46,4 +46,4 @@ angular.module('emoviesApp').config(function ($stateProvider, $urlRouterProvider
       }
     }
   });
-});
+}]);
