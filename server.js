@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/app'));
 
-var port = process.env.PORT || 8000;        // set our port from env or use 8000
+var port = process.env.PORT || 8080;        // set our port from env or use 8000
 
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
