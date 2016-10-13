@@ -72,7 +72,7 @@ body {
 .header-container .input-search-box, .header-container .input-search-box:focus {
   transition: .5s;
   padding-left: 40px;
-  background: url(/images/search-icon-input.2dfd1247.png) 3px center no-repeat
+  background: url(/images/search-icon-input.png) 3px center no-repeat
 }
 
 .navbar-brand {
