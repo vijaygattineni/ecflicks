@@ -4,7 +4,7 @@
 
 var mongoose = require('mongoose');
 //mongoose.connect('mongodb://localhost:27017/ecine'); // connecting to Local database
-mongoose.connect('mongodb://ecineflix.com:27017/ecine'); // connecting to Server database
+mongoose.connect('mongodb://0.0.0.0:27017/ecine'); // connecting to Server database
 mongoose.connection.on('error', function (err) {
     console.log("Connection error");
 });
