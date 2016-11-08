@@ -11,21 +11,28 @@
  * Controller of the emoviesApp
  */
 angular.module('emoviesApp')
-  .controller('VideoCtrl', ['$stateParams', function ($stateParams) {
+  .controller('VideoCtrl', ['$stateParams','$rootScope', 'videoService', '$state', function ($stateParams, $rootScope, videoService, $state) {
     var self = this;
-    self.videoName = $stateParams.videoName;
     self.videoId = $stateParams.videoId;
-
-    //Service call
-    self.getVideoUrl = function (videoName,videoId) {
-      self.videoPath = '/images/The_Jungle_Book_2016.mp4';
-      self.videoTitle = 'The Jungle Book 2016';
-      return self.videoPath;
-    };
+    self.videoPath = '/images/The_Jungle_Book_2016.mp4';
 
     self.init = function () {
-      var videoUrl = self.getVideoUrl(self.videoName,self.videoId);
+      if(self.videoId !== null && self.videoId !== ''){
+        videoService.getVideo(self.videoId).then(function (response) {
+          self.videoDetails = (response.data);
+          if(self.videoDetails.videoUrl){
+            angular.element("video").attr("src",self.videoDetails.videoUrl);
+          }else {
+            angular.element("video").attr("src",self.videoDetails.url);
+          }
+        }, function(err,response){
+          $state.go('root.payment',{'videoId': self.videoId});
+        });
+      }
     };
-
-    this.init();
+    if($rootScope.userLoggedIn){
+      this.init();
+    }else{
+      alert('Please Login');
+    }
   }]);

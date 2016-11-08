@@ -1,0 +1,59 @@
+<div class="payment-container">
+  <div class="row">
+    <h3 style="padding-left: 15px">Payment</h3>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <label>Movie Name:</label>
+    </div>
+    <div class="col-md-3">
+      <span ng-bind="payment.videoDetails.title"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <label>Language:</label>
+    </div>
+    <div class="col-md-3">
+      <span ng-bind="payment.videoDetails.language"></span></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <label>Genre:</label>
+    </div>
+    <div class="col-md-3">
+      <span ng-bind="payment.videoDetails.genere"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <label>Year:</label>
+    </div>
+    <div class="col-md-3">
+      <span ng-bind="payment.videoDetails.year"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <label>Type: </label>
+    </div>
+    <div class="col-md-3">
+      <span ng-bind="payment.videoDetails.type"></span>
+    </div>
+  </div>
+  <div class="row" ng-if="payment.videoDetails.type === 'subscription'"><span style="color: #28a4c9">This is a subscription based movie, you would be able to see all the All Subscriptions on Payment</span>
+  </div>
+  <div class="row payment-btn-container">
+    <div class="col-md-1">
+      <button ng-if="payment.videoDetails.type === 'premium'" type="button" class="btn btn-success" data-dismiss="modal"
+              ng-click="payment.pay(payment.videoId,payment.videoDetails.title)">Pay
+      </button>
+      <button ng-if="payment.videoDetails.type === 'subscription'" type="button" class="btn btn-success"
+              data-dismiss="modal" ng-click="payment.subscribe()">Subscribe
+      </button>
+    </div>
+    <div class="col-md-1">
+      <button type="button" class="btn btn-warning" data-dismiss="modal" ng-click="payment.cancel()">Cancel</button>
+    </div>
+  </div>
+</div>

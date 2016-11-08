@@ -30,7 +30,7 @@ angular.module('emoviesApp').config(['$stateProvider', '$urlRouterProvider', fun
       }
     }
   }).state('root.videoPlay', {
-    url: '/video',
+    url: '/video/:videoId',
     views: {
       'body': {
         templateUrl: '/views/videoPlayer.html',
@@ -45,5 +45,29 @@ angular.module('emoviesApp').config(['$stateProvider', '$urlRouterProvider', fun
         controller: 'SummaryCtrl as summary'
       }
     }
-  });
+  }).state('root.profile',{
+    url:'/profile',
+    views: {
+      'body': {
+        templateUrl: '/views/profile.html',
+        controller: 'ProfileCtrl as profile'
+      }
+    }
+  }).state('root.payment',{
+    url:'/payment/:videoId',
+    views: {
+      'body': {
+        templateUrl: '/views/payment.html',
+        controller: 'PaymentCtrl as payment'
+      }
+    }
+  }).state('root.profileActivation',{
+    url:'/profileActivation/:activationCode',
+    views: {
+      'body': {
+        templateUrl: '/views/profileActivation.html',
+        controller: 'profileActivationCtrl as profileActivation'
+      }
+    }
+  });;
 }]);

@@ -1,0 +1,33 @@
+<div class="profile-container">
+  <div class="row">
+    <h3 style="padding-left: 15px">My Account:</h3>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <label>User Name:</label>
+    </div>
+    <div class="col-md-3">
+      <span ng-bind="profile.userDetails.username"></span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <label>Account Type:</label>
+    </div>
+    <div class="col-md-3">
+      <span ng-bind="profile.userDetails.role"></span>
+      <span ng-if="!profile.userDetails.role">Basic</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <label>Premium Movies:</label>
+    </div>
+    <div class="col-md-9">
+    <span ng-repeat="movie in profile.userDetails.premiumList">
+      <span ng-bind="movie.videoName"></span>
+    </span>
+      <span ng-if="profile.userDetails.premiumList.length === 0">No Premium Movies</span>
+    </div>
+  </div>
+</div>

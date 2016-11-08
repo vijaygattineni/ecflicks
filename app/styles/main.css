@@ -83,6 +83,10 @@ body {
   font-size: 18px
 }
 
+.header-container {
+  padding-left: 30px;
+}
+
 .header-container .mobile-search-box {
   margin-right: 20px
 }
@@ -158,6 +162,15 @@ body {
   background-color: #f7f7f7
 }
 
+.header-container .user-icon-toggle {
+  padding: 10px;
+  font-size: 30px;
+}
+
+.header-container .user-drop-down {
+  left: -92px;
+}
+
 .main-body {
   margin-top: 50px;
   margin-left: 50px;
@@ -186,7 +199,7 @@ body {
 .home-container .movies-list-container .movies-header {
   text-decoration: none;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
   color: #777
 }
 
@@ -301,4 +314,21 @@ body {
   padding-bottom: 20px;
   color: #1d71b8;
   text-align: center
+}
+
+.profile-container {
+ padding: 0px 20px 20px 15px;
+}
+
+
+.payment-container {
+  padding: 0px 20px 20px 15px;
+}
+
+.payment-container .payment-btn-container {
+  padding-top: 20px;
+}
+
+a {
+  cursor: pointer;
 }

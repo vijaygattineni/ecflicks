@@ -15,6 +15,7 @@ angular.module('emoviesApp').controller('SummaryCtrl', ['videoService', '$stateP
 
   self.sortOption = '';
   self.languageOption = '';
+  self.filterOption = '';
   self.orginalResponse = [];
 
   self.sortOptions = [{
@@ -39,6 +40,25 @@ angular.module('emoviesApp').controller('SummaryCtrl', ['videoService', '$stateP
   }, {
     key: 'hindi',
     value: 'Hindi'
+  }];
+  self.filterOptions = [{
+    key: '',
+    value: 'All'
+  },{
+    key: 'action',
+    value: 'Action'
+  },{
+    key: 'animation',
+    value: 'Animation'
+  },{
+    key: 'comedy',
+    value: 'Comedy'
+  },{
+    key: 'romance',
+    value: 'Romance'
+  },{
+    key: 'thriller',
+    value: 'Thriller'
   }];
 
   var init = function () {

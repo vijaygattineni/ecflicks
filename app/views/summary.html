@@ -5,16 +5,22 @@
 
   <span>
     <span style="padding-left: 30px">Sort By: </span>
-    <select ng-model="summary.sortOption"
+    <select ng-model="summary.sortOption" style="border-color: #ccc"
             ng-options="opt.key as opt.value for opt in summary.sortOptions">
     </select>
   </span>
 
     <span>
     <span style="padding-left: 30px">Language: </span>
-       <select ng-model="summary.languageOption"
+       <select ng-model="summary.languageOption" style="border-color: #ccc"
                ng-options="opt.key as opt.value for opt in summary.languageOptions">
        </select>
+    </span>
+  <span style="padding-left: 30px">Filter: </span>
+  <select ng-model="summary.filterOption" style="border-color: #ccc"
+          ng-options="opt.key as opt.value for opt in summary.filterOptions">
+  </select>
+  </span>
   </span>
 </div>
 

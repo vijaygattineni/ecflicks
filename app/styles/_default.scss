@@ -171,6 +171,13 @@ body {
     margin: 5px;
     background-color: #f7f7f7;
   }
+  .user-icon-toggle {
+    padding: 10px;
+    font-size: 30px;
+  }
+  .user-drop-down {
+    left: -92px;
+  }
 }
 
 .main-body {
@@ -179,3 +186,6 @@ body {
   margin-right: 50px;
 }
 
+a {
+  cursor: pointer;
+}

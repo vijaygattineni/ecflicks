@@ -2,7 +2,7 @@
   <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container header-container">
       <div class="navbar-header">
-        <a class="navbar-brand">eCineFlix</a>
+        <a ui-sref="root.movies" class="navbar-brand">eCineFlix</a>
 
         <div class="visible-xs hidden-sm hidden-md hidden-lg pull-right mobile-search-box">
           <input type="text" class="input-search-box form-control" placeholder="Search">
@@ -19,7 +19,7 @@
       <div class="hidden-xs">
         <ul class="nav navbar-nav">
           <li><a ui-sref="root.movies">Movies</a></li>
-          <li><a ui-sref="root.TVShows">TV</a></li>
+          <li><a ui-sref="root.TVShows">TV Shows</a></li>
         </ul>
         <ul class="nav navbar-nav hidden-xs pull-right">
           <li>
@@ -40,8 +40,21 @@
               </div>
             </div>
           </li>
-          <li>
-            <a data-toggle="modal" data-target="#signInModal">Log In
+
+          <li class="dropdown" ng-if="userLoggedIn">
+            <a class="dropdown-toggle user-icon-toggle" data-toggle="dropdown" aria-expanded="false"><span class="fa fa-user"></span></a>
+            <ul class="dropdown-menu dropdown-overflow-items user-drop-down">
+              <li>
+                <a><span ui-sref="root.profile">Account Profile</span></a>
+              </li>
+              <li>
+                <a><span ng-click="main.logout()">Sign Out</span></a>
+              </li>
+            </ul>
+          </li>
+
+          <li ng-if="!userLoggedIn">
+            <a data-toggle="modal" data-target="#signInModal">Sign In
             </a>
           </li>
         </ul>
@@ -63,24 +76,23 @@
       </div>
       <div class="modal-body">
         <div ng-show="main.showLogin" class="login">
-          <form class="form-signin">
-            <h2 class="form-signin-heading">Please login</h2>
-            <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
-            <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+          <form class="form-signin"  ng-submit="main.signInSubmit()">
+            <h2 class="form-signin-heading">Please Sign In</h2>
+            <input type="text" class="form-control" ng-model="main.userName" name="username" placeholder="Email Address" required="" autofocus="" />
+            <input type="password" ng-model="main.password" class="form-control" name="password" placeholder="Password" required=""/>
             <label class="checkbox">
               <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
             </label>
-            <div class="signup-text" ng-click="main.showLogin = !main.showLogin"><a>First time on eCineFlicks? Please SignUp</a></div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+            <div class="signup-text" ng-click="main.showLogin = !main.showLogin"><a>First time on eCineFlix? Please Sign Up</a></div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
           </form>
         </div>
         <div ng-show="!main.showLogin" class="signUp" >
-          <form class="form-signin">
-            <h2 class="form-signin-heading">Please SignUp</h2>
-            <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
-            <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
-            <input type="password" class="form-control" name="password" placeholder="Confirm Password" required=""/>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">SignUp</button>
+          <form class="form-signin" ng-submit="main.signUpSubmit()">
+            <h2 class="form-signin-heading">Please Sign Up</h2>
+            <input type="text" ng-model="main.signUpName" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+            <input type="password" ng-model="main.signUppassword" class="form-control" name="password" placeholder="Password" required=""/>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
           </form>
         </div>
       </div>

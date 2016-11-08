@@ -4,9 +4,8 @@
 'use strict';
 angular.module('emoviesApp')
   .service('videoService', [ '$http', '$q', function ($http, $q) {
-    var baseUrl = 'http://localhost:8000/api/movies';
-    return {
-      getTop4Movies: function () {
+    var baseUrl = 'http://localhost:8080/api/movies';
+      this.getTop4Movies = function () {
         var top4URL = 'fixtures/top4.json';
         return $http.get(top4URL)
           .then(function (respone) {
@@ -15,27 +14,27 @@ angular.module('emoviesApp')
           function (err) {
             return $q.reject(err);
           });
-      },
-      getPremiumMovies: function () {
-        //var premiumMoviesUrl = baseUrl+'/premium';
-        var premiumMoviesFixtureUrl = 'fixtures/premiumMovies.json';
-        return $http.get(premiumMoviesFixtureUrl).then(function (response) {
+      };
+      this.getPremiumMovies = function () {
+        var premiumMoviesUrl = baseUrl+'/premium';
+        //var premiumMoviesFixtureUrl = 'fixtures/premiumMovies.json';
+        return $http.get(premiumMoviesUrl).then(function (response) {
             return response;
           },
           function (err) {
             return $q.reject(err);
           });
-      },
-      getSubscriptionMovies: function () {
-        //var subscriptionMoviesUrl = baseUrl+'/subscription';
-        var subscriptionMoviesFixtureUrl = 'fixtures/subscriptionMovies.json';
-        return $http.get(subscriptionMoviesFixtureUrl).then(function (response) {
+      };
+      this.getSubscriptionMovies = function () {
+        var subscriptionMoviesUrl = baseUrl+'/subscription';
+        //var subscriptionMoviesFixtureUrl = 'fixtures/subscriptionMovies.json';
+        return $http.get(subscriptionMoviesUrl).then(function (response) {
           return response;
         }, function (err) {
           return $q.reject(err);
         });
-      },
-      getTop4TvShows: function () {
+      };
+      this.getTop4TvShows = function () {
         var top4URL = 'fixtures/top4TvShows.json';
         return $http.get(top4URL)
           .then(function (respone) {
@@ -44,8 +43,8 @@ angular.module('emoviesApp')
           function (err) {
             return $q.reject(err);
           });
-      },
-      getPremiumTVShows: function () {
+      };
+      this.getPremiumTVShows = function () {
         var premiumTVShowsUrl = 'fixtures/premiumTVShows.json';
         return $http.get(premiumTVShowsUrl)
           .then(function (respone) {
@@ -54,8 +53,8 @@ angular.module('emoviesApp')
           function (err) {
             return $q.reject(err);
           });
-      },
-      getSubscriptionTVShows: function () {
+      };
+      this.getSubscriptionTVShows = function () {
         var premiumTVShowsUrl = 'fixtures/subscripitionTVShows.json';
         return $http.get(premiumTVShowsUrl)
           .then(function (respone) {
@@ -64,8 +63,8 @@ angular.module('emoviesApp')
           function (err) {
             return $q.reject(err);
           });
-      },
-      getSuggestions: function () {
+      };
+      this.getSuggestions = function () {
         var suggestionUrl = 'fixtures/searchResults.json';
         return $http.get(suggestionUrl)
           .then(function (response) {
@@ -73,6 +72,39 @@ angular.module('emoviesApp')
         }, function (err) {
           return $q.reject(err);
         });
+      };
+      this.getVideo = function (videoId) {
+        var videoUrl = baseUrl+'/video/'+videoId;
+        //var subscriptionMoviesFixtureUrl = 'fixtures/subscriptionMovies.json';
+        return $http.get(videoUrl).then(function (response) {
+          return response;
+        }, function (err) {
+          return $q.reject(err);
+        });
+      };
+      this.getVideoDetails = function (videoId) {
+        var videoUrl = baseUrl+'/videodetails/'+videoId;
+        //var subscriptionMoviesFixtureUrl = 'fixtures/subscriptionMovies.json';
+        return $http.get(videoUrl).then(function (response) {
+          return response;
+        }, function (err) {
+          return $q.reject(err);
+        });
+      };
+      this.payForPremium = function(videoId, videoName) {
+        var payPremiumUrl = baseUrl+'/payForPremium/'+ videoId +'/'+ videoName;
+        return $http.get(payPremiumUrl).then(function (response) {
+          return response;
+        }, function (err) {
+          return $q.reject(err);
+        });
+      };
+      this.subscribe = function(){
+        var paySubscription = baseUrl+'/subscription/pay';
+        return $http.get(paySubscription).then(function (response) {
+          return response;
+        }, function (err) {
+          return $q.reject(err);
+        });
       }
-    };
   }]);
