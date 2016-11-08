@@ -4,7 +4,7 @@
 'use strict';
 angular.module('emoviesApp')
   .service('videoService', [ '$http', '$q', function ($http, $q) {
-    var baseUrl = 'http://localhost:8080/api/movies';
+    var baseUrl = 'http://www.ecineflix.com/api/movies';
       this.getTop4Movies = function () {
         var top4URL = 'fixtures/top4.json';
         return $http.get(top4URL)
