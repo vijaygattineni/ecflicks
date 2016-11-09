@@ -16,17 +16,15 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.router',
-    'LocalStorageModule'
-  ]).run(function(localStorageService, $rootScope, authService){
-    var token = localStorageService.get('accessToken');
+    'ui.router'
+  ]).run(function($rootScope, authService){
+    var token = localStorage.getItem('accessToken');
     if (token != null) {
       //Check if the token is not expired
       authService.tokenStatus({'token':token}).then(function (res){
-        console.log(res.message);
       }, function(err){
         $rootScope.userLoggedIn = false;
-        localStorageService.set('accessToken', null);
+        localStorage.setItem('accessToken', null);
       });
       $rootScope.userLoggedIn = true;
     }else{

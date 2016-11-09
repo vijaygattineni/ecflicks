@@ -8,8 +8,8 @@
  * Controller of the emoviesApp
  */
 angular.module('emoviesApp').controller('MainCtrl',
-  ['$scope', '$rootScope', 'videoService', 'authService', '$filter', 'localStorageService', '$state',
-    function ($scope, $rootScope, videoService, authService, $filter, localStorageService, $state) {
+  ['$scope', '$rootScope', 'videoService', 'authService', '$filter', '$state',
+    function ($scope, $rootScope, videoService, authService, $filter, $state) {
       var self = this;
       $rootScope.currentState = 'Movies';
       self.showLogin = true;
@@ -20,7 +20,6 @@ angular.module('emoviesApp').controller('MainCtrl',
         if (inputText !== '' && re.test(inputText)) {
           videoService.getSuggestions(inputText).then(function (response) {
             self.suggestionResults = $filter('filter')(response.data.relatedResults, {title: inputText});
-            console.log(self.suggestionResults);
           });
         } else {
           self.suggestionResults = [];
@@ -42,7 +41,6 @@ angular.module('emoviesApp').controller('MainCtrl',
         authService.signIn({username: self.userName, password: self.password}).then(function(){
           //alert("Login Successful");
           $rootScope.userLoggedIn = true;
-          console.log(self.userName);
           angular.element("#signInModal").modal("hide");
         },function(err){
           alert(err.data.message);
@@ -51,7 +49,7 @@ angular.module('emoviesApp').controller('MainCtrl',
 
       /*SignOut*/
       self.logout = function() {
-        localStorageService.set('accessToken',null);
+        localStorage.setItem('accessToken',null);
         $rootScope.userLoggedIn = false;
         $state.go('root.movies');
       };

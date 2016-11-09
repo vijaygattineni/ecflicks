@@ -15,7 +15,6 @@ angular.module('emoviesApp')
 
     videoService.getVideoDetails(self.videoId).then(function (response) {
       self.videoDetails = (response.data);
-      console.log('Response',self.videoDetails);
     });
 
     self.pay = function(videoId,title) {

@@ -3,8 +3,9 @@
  */
 'use strict';
 angular.module('emoviesApp')
-  .service('authService', [ '$http', '$q', 'localStorageService', function ($http, $q, localStorageService) {
+  .service('authService', [ '$http', '$q', function ($http, $q) {
     var baseUrl = 'http://ecineflix.com';
+    //var baseUrl = 'http://localhost:8080';
     this.signUp = function (data) {
         var signupUrl =  baseUrl+'/signup';
         return $http.post(signupUrl,data)
@@ -19,8 +20,7 @@ angular.module('emoviesApp')
         var signInUrl =  baseUrl+'/login';
         return $http.post(signInUrl,data)
           .then(function (response) {
-            localStorageService.set('accessToken',response.data.token);
-            console.log('token pushed into localStorageService');
+            localStorage.setItem('accessToken',response.data.token);
             return response;
           },
           function (err) {

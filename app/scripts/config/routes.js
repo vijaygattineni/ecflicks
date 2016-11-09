@@ -2,7 +2,7 @@
  * Created by vgattineni on 9/13/16.
  */
 'use strict';
-angular.module('emoviesApp').config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+angular.module('emoviesApp').config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
 
   $urlRouterProvider.otherwise('/movies');
 
@@ -69,5 +69,20 @@ angular.module('emoviesApp').config(['$stateProvider', '$urlRouterProvider', fun
         controller: 'profileActivationCtrl as profileActivation'
       }
     }
-  });;
+  });
+
+  $httpProvider.interceptors.push(function() {
+    return {
+      'request': function(config) {
+        if (localStorage.getItem('accessToken') != null && localStorage.getItem('accessToken') != '') {
+          config.headers['Authorization'] = localStorage.getItem('accessToken');
+        }
+        else {
+          delete config.headers.Authorization;
+        }
+        return config;
+      }
+    };
+  });
+
 }]);

@@ -9,14 +9,8 @@ angular.module('emoviesApp')
     self.init = function () {
       self.premiumMovies = [];
       authService.getProfileDetails().then(function (result) {
-        console.log(result.data);
-        if(result.data === null){
-          self.init();
-        }else{
           self.userDetails = result.data;
-        }
       }, function (err) {
-        console.log(err);
       });
     };
 

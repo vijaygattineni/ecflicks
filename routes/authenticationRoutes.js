@@ -11,12 +11,10 @@ var nodemailer = require('nodemailer');
 
 router.post('/signup', function(req,res){
   var data = req.body;
-  console.log(data);
   User.findOne({username: data.username}, function(err,result){
     if(err){
       throw err;
     }
-    console.log(result);
     if(result !== null) {
       res.status(500).send({
         message: 'user name already exists'
@@ -25,7 +23,6 @@ router.post('/signup', function(req,res){
       data.activationCode = Math.random().toString(36).substring(7);
       data.accountStatus = 'inActive';
       data.role = 'basic';
-      console.log(data);
       var newUser = new User(data);
       newUser.save(function(err){
         if(err) {
@@ -42,7 +39,6 @@ router.post('/signup', function(req,res){
         });
         smtpTransport.on('log', console.log);
         var activationUrl = 'http://ecineflix.com/#/profileActivation/'+data.activationCode ;
-        console.log('activation URl',activationUrl);
         var mailOptions = {
           from: '"ecineFlix"<vijaygattineni369@gmail.com>', // sender address
           to: data.username, // list of receivers
@@ -111,12 +107,10 @@ router.post('/validateToken', function(req,res){
 router.post('/getProfileDetails', function(req,res){
   var token = req.headers['authorization'];
   if(token){
-    console.log('got token',token);
     User.findOne({'token': token}, function (err, userDetails) {
       if (err) {
         res.send(err);
       } else {
-        console.log('User Details',userDetails);
         res.json(userDetails);
       }
     });

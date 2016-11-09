@@ -67,7 +67,6 @@ angular.module('emoviesApp').controller('SummaryCtrl', ['videoService', '$stateP
         self.title = 'Premium Movies';
         videoService.getPremiumMovies().then(function (response) {
           self.resultList = response.data;
-          console.log(self.resultList);
         });
         break;
       case 'SubscriptionMovies':
