@@ -32,8 +32,8 @@ router.post('/signup', function(req,res){
         var smtpTransport = nodemailer.createTransport({
           service: 'gmail',
           auth: {
-            user: 'vijaygattineni369@gmail.com',
-            pass: 'Aadyasai123$'
+            user: 'ecineflix@gmail.com',
+            pass: 'Welcome2ECF'
           },
           debug: true
         });
