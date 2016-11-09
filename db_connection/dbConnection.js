@@ -3,7 +3,7 @@
  */
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/ecine'); //connection on local database
+//mongoose.connect('mongodb://localhost:27017/ecine'); //connection on local database
 mongoose.connect('mongodb://localhost/ecine'); //connection on server database
 
 mongoose.connection.on('error', function (err) {
