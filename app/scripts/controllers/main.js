@@ -49,7 +49,7 @@ angular.module('emoviesApp').controller('MainCtrl',
 
       /*SignOut*/
       self.logout = function() {
-        localStorage.setItem('accessToken',null);
+        localStorage.removeItem('accessToken');
         $rootScope.userLoggedIn = false;
         $state.go('root.movies');
       };

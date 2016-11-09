@@ -19,15 +19,16 @@ angular
     'ui.router'
   ]).run(function($rootScope, authService){
     var token = localStorage.getItem('accessToken');
-    if (token != null) {
+    if (token != null && token != '') {
       //Check if the token is not expired
       authService.tokenStatus({'token':token}).then(function (res){
+        $rootScope.userLoggedIn = true;
       }, function(err){
         $rootScope.userLoggedIn = false;
-        localStorage.setItem('accessToken', null);
+        localStorage.removeItem('accessToken');
       });
-      $rootScope.userLoggedIn = true;
     }else{
+      localStorage.removeItem('accessToken');
       $rootScope.userLoggedIn = false;
     }
   });
