@@ -79,7 +79,7 @@ router.get('/videoDetails/:videoId',function (req, res) {
 
 });
 
-router.get('/payForPremium/:videoId/:videoName',function (req, res) {
+router.put('/payForPremium/:videoId/:videoName',function (req, res) {
   var token = req.headers['authorization'];
   if(token){
     User.findOne({'token': token}, function (err, userDetails) {
@@ -96,7 +96,7 @@ router.get('/payForPremium/:videoId/:videoName',function (req, res) {
 
 });
 
-router.get('/subscription/pay',function (req, res) {
+router.put('/subscription/pay',function (req, res) {
   var token = req.headers['authorization'];
   if(token){
     User.findOne({'token': token}, function (err, userDetails) {

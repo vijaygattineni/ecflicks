@@ -4,8 +4,8 @@
 'use strict';
 angular.module('emoviesApp')
   .service('authService', [ '$http', '$q', function ($http, $q) {
-    var baseUrl = 'http://ecineflix.com';
-    //var baseUrl = 'http://localhost:8080';
+    //var baseUrl = 'http://ecineflix.com';
+    var baseUrl = 'http://localhost:8080';
     this.signUp = function (data) {
         var signupUrl =  baseUrl+'/signup';
         return $http.post(signupUrl,data)
@@ -39,7 +39,7 @@ angular.module('emoviesApp')
     };
     this.getProfileDetails = function(){
       var profileDetailsUrl = baseUrl+'/profileDetails';
-      return $http.post(profileDetailsUrl)
+      return $http.get(profileDetailsUrl)
         .then(function (response) {
           return response;
         },
@@ -49,7 +49,7 @@ angular.module('emoviesApp')
     };
     this.profileActivation = function(activationCode){
       var profileActivationUrl =  baseUrl+'/activateProfile/'+activationCode;
-      return $http.post(profileActivationUrl)
+      return $http.put(profileActivationUrl)
         .then(function (response) {
           return response;
         },

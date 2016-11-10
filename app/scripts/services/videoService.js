@@ -4,8 +4,8 @@
 'use strict';
 angular.module('emoviesApp')
   .service('videoService', [ '$http', '$q', function ($http, $q) {
-    var baseUrl = 'http://www.ecineflix.com/api/movies';
-    //var baseUrl = 'http://localhost:8080/api/movies';
+    //var baseUrl = 'http://www.ecineflix.com/api/movies';
+    var baseUrl = 'http://localhost:8080/api/movies';
       this.getTop4Movies = function () {
         var top4URL = 'fixtures/top4.json';
         return $http.get(top4URL)
@@ -94,7 +94,7 @@ angular.module('emoviesApp')
       };
       this.payForPremium = function(videoId, videoName) {
         var payPremiumUrl = baseUrl+'/payForPremium/'+ videoId +'/'+ videoName;
-        return $http.get(payPremiumUrl).then(function (response) {
+        return $http.put(payPremiumUrl).then(function (response) {
           return response;
         }, function (err) {
           return $q.reject(err);
@@ -102,7 +102,7 @@ angular.module('emoviesApp')
       };
       this.subscribe = function(){
         var paySubscription = baseUrl+'/subscription/pay';
-        return $http.get(paySubscription).then(function (response) {
+        return $http.put(paySubscription).then(function (response) {
           return response;
         }, function (err) {
           return $q.reject(err);

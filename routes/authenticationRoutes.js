@@ -104,7 +104,7 @@ router.post('/validateToken', function(req,res){
     }
   });
 });
-router.post('/profileDetails', function(req,res){
+router.get('/profileDetails', function(req,res){
   var token = req.headers['authorization'];
   if(token){
     User.findOne({'token': token}, function (err, userDetails) {
@@ -117,7 +117,7 @@ router.post('/profileDetails', function(req,res){
   } else{
     res.status(403);}
 });
-router.post('/activateProfile/:activationCode', function(req,res){
+router.put('/activateProfile/:activationCode', function(req,res){
   User.update({activationCode :req.params.activationCode}, {$set : {'accountStatus': 'Active'}}, function(err, doc){
     if (err) return res.send(500, { error: err });
     return res.send("Account Activated");
