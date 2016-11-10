@@ -33,6 +33,6 @@ angular.module('emoviesApp')
     if($rootScope.userLoggedIn){
       this.init();
     }else{
-      alert('Please Login');
+      $state.go('root.movies');
     }
   }]);

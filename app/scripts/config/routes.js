@@ -17,7 +17,7 @@ angular.module('emoviesApp').config(['$stateProvider', '$urlRouterProvider', '$h
     url: '/movies',
     views: {
       'body': {
-        templateUrl: '/views/home.html',
+        templateUrl: '/views/movie.html',
         controller: 'MovieCtrl as videos',
       }
     }

@@ -11,7 +11,7 @@
  * Controller of the emoviesApp
  */
 angular.module('emoviesApp')
-  .controller('MovieCtrl', ['videoService', function (videoService) {
+  .controller('MovieCtrl', ['videoService', '$state', '$rootScope', function (videoService, $state, $rootScope) {
     var self = this;
     self.currentState = 'Movies';
 
@@ -21,6 +21,14 @@ angular.module('emoviesApp')
         premiumSubLists.push(premiumVideosList.splice(0, 4));
       }
       return premiumSubLists;
+    };
+
+    self.showVideo = function (videoId) {
+      if($rootScope.userLoggedIn) {
+        $state.go("root.videoPlay",{'videoId': videoId});
+      }else{
+        alert('Please Login');
+      }
     };
 
     var init = function () {

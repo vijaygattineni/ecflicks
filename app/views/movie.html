@@ -39,7 +39,7 @@
           <div class="item row" ng-repeat="items in videos.premiumVideoSubLists" ng-class="{'active':$first}">
             <div class="col-md-3 col-sm-4" ng-repeat="item in items"
                  ng-class="{'hidden-xs':!$first, 'hidden-sm':$last}">
-              <div class="panel panel-default my_panel" ui-sref="root.videoPlay({'videoId': item.videoId})">
+              <div class="panel panel-default my_panel" ng-click="videos.showVideo(item.videoId)">
                 <div class="panel-body">
                   <img ng-src="{{item.posterUrl}}" alt="" class="img-responsive center-block"/>
                 </div>
