@@ -29,7 +29,7 @@
                      ng-change="main.getSuggestions(main.searchInput)">
             </form>
             <div class="row suggestions-container">
-              <div class="row search-results-section" ng-repeat="item in main.suggestionResults">
+              <div class="row search-results-section" ng-repeat="item in main.suggestionResults" ng-click="main.showVideo(item.videoId)">
                 <div class="col-xs-3 suggestion-image-cont">
                   <span class="fa fa-film fa-2x"></span>
                 </div>

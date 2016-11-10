@@ -1,3 +1,6 @@
+/**
+ * Created by vgattineni on 9/17/16.
+ */
 'use strict';
 
 /**
@@ -63,6 +66,15 @@ angular.module('emoviesApp').controller('MainCtrl',
           });
         }
       });
+
+      /*ShowVideo on search item click*/
+      self.showVideo = function (videoId) {
+        if($rootScope.userLoggedIn) {
+          $state.go("root.videoPlay",{'videoId': videoId});
+        }else{
+          alert('Please Login');
+        }
+      };
 
       /*Activate Carousel*/
       angular.element(document).ready(function(){

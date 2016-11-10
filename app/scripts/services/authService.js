@@ -38,7 +38,7 @@ angular.module('emoviesApp')
       });
     };
     this.getProfileDetails = function(){
-      var profileDetailsUrl = baseUrl+'/getProfileDetails';
+      var profileDetailsUrl = baseUrl+'/profileDetails';
       return $http.post(profileDetailsUrl)
         .then(function (response) {
           return response;

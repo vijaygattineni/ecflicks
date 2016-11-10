@@ -104,7 +104,7 @@ router.post('/validateToken', function(req,res){
     }
   });
 });
-router.post('/getProfileDetails', function(req,res){
+router.post('/profileDetails', function(req,res){
   var token = req.headers['authorization'];
   if(token){
     User.findOne({'token': token}, function (err, userDetails) {
