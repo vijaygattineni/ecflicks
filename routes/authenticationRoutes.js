@@ -40,7 +40,7 @@ router.post('/signup', function(req,res){
         smtpTransport.on('log', console.log);
         var activationUrl = 'http://ecineflix.com/#/profileActivation/'+data.activationCode ;
         var mailOptions = {
-          from: '"ecineFlix"<vijaygattineni369@gmail.com>', // sender address
+          from: '"ecineFlix"<ecineflix@gmail.com>', // sender address
           to: data.username, // list of receivers
           subject: 'Sign Up Confirmation', // Subject line
           text: 'Please confirm your eCineFlix Sign up clicking on below Link', // plaintext body
