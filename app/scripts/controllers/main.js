@@ -32,7 +32,7 @@ angular.module('emoviesApp').controller('MainCtrl',
       /*SignUp form*/
       self.signUpSubmit = function () {
         authService.signUp({username: self.signUpName, password: self.signUppassword}).then(function(response){
-          //alert(response.data.message);
+          alert(response.data.message);
           self.showLogin = true;
         }, function(err){
           alert(err.data.message);
