@@ -4,7 +4,7 @@
 'use strict';
 angular.module('emoviesApp')
   .service('authService', [ '$http', '$q', function ($http, $q) {
-    var baseUrl = 'http://www.ecineflix.com/api/';
+    var baseUrl = 'http://www.ecineflix.com/api';
     //var baseUrl = 'http://localhost:8080/api/';
     this.signUp = function (data) {
         var signupUrl =  baseUrl+'/signup';
