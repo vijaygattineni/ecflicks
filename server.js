@@ -25,7 +25,7 @@ app.use(corsHandler);
 app.use(authTokenInterceptor);
 
 // Register routes
-app.use('/', authRoutes);
+app.use('/api/', authRoutes);
 app.use('/api/movies', movieRoutes);
 
 

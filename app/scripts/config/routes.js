@@ -74,8 +74,13 @@ angular.module('emoviesApp').config(['$stateProvider', '$urlRouterProvider', '$h
   $httpProvider.interceptors.push(function() {
     return {
       'request': function(config) {
+        var url = typeof config.url === 'undefined' ? '' : config.url;
         if (localStorage.getItem('accessToken') != null && localStorage.getItem('accessToken') != '') {
-          config.headers['Authorization'] = localStorage.getItem('accessToken');
+          var isHtml = /\.html$/;
+          if(!isHtml.test(url)){
+            config.headers['Authorization'] = localStorage.getItem('accessToken');
+            console.log("Interceptor Pushing aut token on header");
+          }
         }
         else {
           delete config.headers.Authorization;

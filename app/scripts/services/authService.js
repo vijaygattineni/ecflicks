@@ -4,8 +4,8 @@
 'use strict';
 angular.module('emoviesApp')
   .service('authService', [ '$http', '$q', function ($http, $q) {
-    var baseUrl = 'http://ecineflix.com';
-    //var baseUrl = 'http://localhost:8080';
+    var baseUrl = 'http://www.ecineflix.com/api/';
+    //var baseUrl = 'http://localhost:8080/api/';
     this.signUp = function (data) {
         var signupUrl =  baseUrl+'/signup';
         return $http.post(signupUrl,data)
@@ -21,6 +21,7 @@ angular.module('emoviesApp')
         return $http.post(signInUrl,data)
           .then(function (response) {
             localStorage.setItem('accessToken',response.data.token);
+            console.log('Got access token to localstorage',response.data.token);
             return response;
           },
           function (err) {

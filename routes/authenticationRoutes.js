@@ -106,16 +106,20 @@ router.post('/validateToken', function(req,res){
 });
 router.get('/profileDetails', function(req,res){
   var token = req.headers['authorization'];
+  console.log('reached get profile details api');
+  console.log('obtained token', token);
   if(token){
     User.findOne({'token': token}, function (err, userDetails) {
       if (err) {
         res.send(err);
       } else {
+        console.log('returning response',userDetails);
         res.json(userDetails);
       }
     });
   } else{
-    res.status(403);}
+    res.status(403);
+  }
 });
 router.put('/activateProfile/:activationCode', function(req,res){
   User.update({activationCode :req.params.activationCode}, {$set : {'accountStatus': 'Active'}}, function(err, doc){
